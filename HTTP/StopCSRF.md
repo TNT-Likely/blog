@@ -1,6 +1,6 @@
-# 预防CSRF跨站请求攻击
+# 预防CSRF跨站请求伪造
 
-## 什么是CSRF跨站请求攻击？
+## 什么是CSRF跨站请求伪造？
 
 CSRF(cross-site request forgery),即攻击者可以盗用你的身份发邮件，甚至盗用你的帐号去支付。
 
