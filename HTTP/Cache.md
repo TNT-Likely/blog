@@ -42,7 +42,7 @@
   ***缺陷  1)因为时间以秒为单位，所以精度不够 2)如果打开了本地缓存文件，则last-modified时间会被更改***
 
 - ETag/If-None-Match(HTTP1.1)  
-  ETag为该资源的唯一hash标识，验证时会设置If-None-Match的值为ETag进行校验，优先级高于Last-Modified。 
+  ETag为该资源的唯一hash标识，验证时会设置If-None-Match的值为ETag进行校验，优先级高于Last-Modified。   
   ***缺陷 1)因为要计算文件hash值，性能不高***
 
 ## 实际使用中的建议
