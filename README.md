@@ -15,3 +15,6 @@
   
 - VUE
   - [响应式设计原理](VUE/Responsive.md)
+
+- JAVASCRIPT
+  - [基本类型和引用类型](JAVASCRIPT/Type.md)
