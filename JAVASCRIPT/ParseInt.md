@@ -1,4 +1,4 @@
-# parseInt的具体实现
+# 如何实现一个parseInt
 
 ```
 function(string, [radix]) {}
