@@ -1,6 +1,6 @@
 # 如何实现EventEmitter
 
-EventEmitter是node中非常常见的一个实现"发布、订阅"设计模式的内置模块, net、http等模块也都使用了它，在介绍如何实现EventEmitter之前我们先来梳理一下该模块的方法和属性
+EventEmitter是node中非常常见的一个实现"观察者"设计模式的内置模块, net、http等模块也都使用了它，在介绍如何实现EventEmitter之前我们先来梳理一下该模块的方法和属性
 
 ## 内置属性
 
