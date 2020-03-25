@@ -6,6 +6,7 @@
 
 - NODE
   - [V8垃圾回收机制](NODE/V8GC.md)
+  - [如何实现EventEmitter](NODE/EventEmitter.md)
 
 - HTTP
   - [HTTP2的四大特性](HTTP/HTTP2.md)
