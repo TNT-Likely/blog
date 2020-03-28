@@ -21,6 +21,7 @@
   - [基本类型和引用类型](JAVASCRIPT/Type.md)
   - [如何实现一个parseInt](JAVASCRIPT/ParseInt.md)
   - [ES5如何实现继承](JAVASCRIPT/Extend.md)
+  - [JS事件模型](JAVASCRIPT/EventModel.md)
 
 - CSS
   - [水平垂直居中](CSS/Center.md)
