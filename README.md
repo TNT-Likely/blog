@@ -25,6 +25,7 @@
 
 - CSS
   - [水平垂直居中](CSS/Center.md)
+  - [纯CSS画三角形](CSS/Triangle.md)
 
 - 算法
   - [TopK](ALGORITHM/TopK.md)
