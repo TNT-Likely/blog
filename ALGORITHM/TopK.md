@@ -22,8 +22,8 @@
 ![快速选择](TopKQuickSelect.png "快速选择")
 ![快速划分](TopKParition.png "快速划分")
 
-  - 该解法是基于快速选择算法的变种，先随机选择一个中数值
-  - 将小于该中数值的往左边移动，将大于该中枢值得往右边移动，最终得到该中枢值得pos
+  - 该解法是基于快速选择算法的变种，先随机选择一个中枢值
+  - 将小于该中枢值的往左边移动，将大于该中枢值的往右边移动，最终得到该中枢值的pos
   - 如果 pos = length - k 则终止递归，如果小于，则继续右边重复 前两步，反之左边递归
   ```
   const getTopK = (nums, k) => {
@@ -64,61 +64,61 @@
 - 小顶堆  
   构建一个长度不大于k的小顶堆  
   ```
-  var findKthLargest = function(nums, k) {
+  var findKthLargest = function (nums, k) {
     class Heap {
-      constructor(data) {
-          this.data = [...data]
-      }
+        constructor(data) {
+            this.data = [...data]
+        }
 
-      _swap(a, b) {
-          let tmp = this.data[a]
-          this.data[a] = this.data[b]
-          this.data[b] = tmp 
-      }
+        _swap(a, b) {
+            let tmp = this.data[a]
+            this.data[a] = this.data[b]
+            this.data[b] = tmp
+        }
 
-      _heapUp(i) {
+        _heapUp(i) {
 
-      }
+        }
 
-      _down(index = 0) {
-          let len = this.data.length
-          let nIndex = index
-          let nLeft = (2 * (nIndex + 1)) - 1
-          let nRight = (2 * (nIndex + 1)) 
-          if (nLeft < len) {
-          let target = null
-          if (nRight >= len) target = nLeft
-          else target = (this.data[nLeft] < this.data[nRight] ? nLeft : nRight)
-          if (this.data[nIndex] > this.data[target]) {
-              this._swap(nIndex, target)
-              this._down(target)
-          }
-          }
-      }
+        _down(index = 0) {
+            let len = this.data.length
+            let nIndex = index
+            let nLeft = (2 * (nIndex + 1)) - 1
+            let nRight = (2 * (nIndex + 1))
+            if (nLeft < len) {
+                let target = null
+                if (nRight >= len) target = nLeft
+                else target = (this.data[nLeft] < this.data[nRight] ? nLeft : nRight)
+                if (this.data[nIndex] > this.data[target]) {
+                    this._swap(nIndex, target)
+                    this._down(target)
+                }
+            }
+        }
 
-      _insert(value) {
-          let nIndex = this.data.length
-          this.data.push(value)
-          let nFIndex = Math.floor((nIndex - 1) / 2)
-          while(nIndex > 0 ){
-          if (this.data[nFIndex] > this.data[nIndex]) {
-              this._swap(nFIndex, nIndex)
-          }
-          nIndex = nFIndex
-          nFIndex = Math.floor((nIndex - 1) / 2)
-          }
-      }
+        _insert(value) {
+            let nIndex = this.data.length
+            this.data.push(value)
+            let nFIndex = Math.floor((nIndex - 1) / 2)
+            while (nIndex > 0) {
+                if (this.data[nFIndex] > this.data[nIndex]) {
+                    this._swap(nFIndex, nIndex)
+                }
+                nIndex = nFIndex
+                nFIndex = Math.floor((nIndex - 1) / 2)
+            }
+        }
 
-      poll() {
-          let top_item = this.data[0]
-          this.data[0] = this.data.pop()
-          this._down(0)
-          return top_item
-      }
+        poll() {
+            let top_item = this.data[0]
+            this.data[0] = this.data.pop()
+            this._down(0)
+            return top_item
+        }
 
-      get size() {
-          return this.data.length
-      }
+        get size() {
+            return this.data.length
+        }
     }
 
 
