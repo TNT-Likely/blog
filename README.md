@@ -23,6 +23,7 @@
   - [如何实现一个parseInt](JAVASCRIPT/ParseInt.md)
   - [ES5如何实现继承](JAVASCRIPT/Extend.md)
   - [JS事件模型](JAVASCRIPT/EventModel.md)
+  - [JS中AST的使用](JAVASCRIPT/AST.md)
 
 - CSS
   - [水平垂直居中](CSS/Center.md)
