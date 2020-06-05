@@ -18,7 +18,7 @@
 
 | 词法单元 | 含义 | 模式 | 举例 |
 |  ----  | ---- | ----  | ---- |
-| reservedWord | 保留字 | | let、const、class等 |
+| keyword | 保留字 | | let、const、class等 |
 | idenitifier | 标识符 | 以字母、_、$开头的连续字符 | const、let、a |
 | operator | 操作符 | | *、/、+、- |
 | whitespace | 空白符 | | |
@@ -37,12 +37,23 @@
 
 #### 语法分析
 
+常见语法单元如下:
+
+| 语法单元 | 含义 | 举例 |
+|  ----  | ---- | ---- |
+| VariableDeclaration | 变量声明 | const a = 1, b = 2 |
+| FunctionExpression | 函数表达式 | |
+| ... | | | 
+
+[参考babel](https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md)
+
 示例语法解析程序:
 
 ![SyntaxAnazylerCode](SyntaxAnalyzerCode.png)
 
 ### 市面上的解析器
 
+- [online astwxplorer.net](https://astexplorer.net/)
 - [acorn](https://github.com/acornjs/acorn/tree/master/acorn)
 - [esprima](https://github.com/jquery/esprima)
 - [babel](https://github.com/babel/babel/tree/master/packages/babel-parser)
@@ -59,4 +70,14 @@
 
 ## AST实战使用
 
-- 
+### 编写一个babel插件(es6箭头函数转es5)
+
+#### babel 编译的过程
+
+![babel编译过程](BabelProgress.png)
+
+#### 如何编写babel插件
+
+- 比较ast的差异
+![ASTDiff](ASTDiff.png)
+- 修改ast
