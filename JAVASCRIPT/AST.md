@@ -14,6 +14,8 @@
 
 #### 词法分析
 
+> 词法分析是计算机科学中将字符序列转换为标记（token）序列的过程
+
 常见词法单元如下:
 
 | 词法单元 | 含义 | 模式 | 举例 |
@@ -37,12 +39,15 @@
 
 #### 语法分析
 
+> 语法分析是根据某种给定的形式文法对由单词序列（如英语单词序列）构成的输入文本进行分析并确定其语法结构的一种过程
+
 常见语法单元如下:
 
 | 语法单元 | 含义 | 举例 |
 |  ----  | ---- | ---- |
 | VariableDeclaration | 变量声明 | const a = 1, b = 2 |
-| FunctionExpression | 函数表达式 | |
+| ImportDeclaration | 导入申明 | import antd from 'antd' |
+| FunctionExpression | 函数表达式 | function() { } |
 | ... | | | 
 
 [参考babel](https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md)
@@ -70,7 +75,7 @@
 
 ## AST实战使用
 
-### 编写一个babel插件(es6箭头函数转es5)
+### [1] 编写一个babel插件(es6箭头函数转es5)
 
 #### babel 编译的过程
 
@@ -79,5 +84,24 @@
 #### 如何编写babel插件
 
 - 比较ast的差异
+
 ![ASTDiff](ASTDiff.png)
 - 修改ast
+
+![BabelPluginDemo](BabelPluginDemo.png)
+
+### [2] wepy转vue
+
+#### 示例源码
+
+![WepyDemo](WepyDemo.png)
+
+#### 转换思路
+
+- 去除wepy导入
+- class转化为object
+- 生命周期转化
+
+#### 代码实践
+
+[wepy转vue](https://github.com/TNT-Likely/AST_DEMO/blob/master/04-WepyToVue/lib/index.js)
